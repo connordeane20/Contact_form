@@ -1,60 +1,91 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: 100;
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 100;
 }
-body{
-    background: black;
-}
-
-.container{
-    margin: auto;
-    width: 75%;
-    background-color: rgb(59, 59, 73);
-    color: white;
+body {
+  background: black;
+  overflow: scroll;
 }
 
-.picture{
-    justify-content: center;
-    display: flex;
-    background-color:  rgb(59, 59, 73);
-    
-    img{
-        width: 750px;
-        height: 700px;
-        border-radius: 100px;
-    }
+.container {
+  margin: auto;
+  width: 75%;
+  height: 100vh;
+  background-color: black;
+  color: white;
 }
 
-.details{
-    text-align: center;
-    #contactName{
-        text-align: center;
-    }
-   button{
-       align-items: center;
-       
-       width: 200px;
-       height: 200px;
-       font-size: 50px;
-       background-color: rgb(59, 59, 73);
-       border: none;
-   }
-    h1{
-        font-size: 80px;
-    }
+.picture {
+  justify-content: center;
+  display: flex;
+  background-color: black;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    position: relative;
+  }
 }
 
-.phoneNumber{
-    background-color: red;
-    text-align: center;
+.details {
+  text-align: center;
+  background-color: rgb(43, 43, 59);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  height: 150px;
+
+  button {
     align-items: center;
-    height: 100px;
-    padding-top: 30px;
-   
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(43, 43, 59);
+    border: none;
+  }
+  #btn-phone {
+    color: rgb(36, 158, 36);
+  }
+
+  #btn-msg {
+    color: rgb(55, 127, 209);
+  }
+
+  #btn-facetime {
+    color: rgb(67, 76, 197);
+  }
+  h1 {
+    font-size: 20px;
+    padding-top: 2rem;
+  }
 }
 
+.phoneNumber {
+  background-color: rgb(43, 43, 59);
+  text-align: left;
+  align-items: center;
+  height: 40px;
+  padding-top: 10px;
+  border-radius: 2rem;
+  font-size: 10px;
+  justify-content: center;
+  #number {
+    margin-left: 10px;
+  }
+}
 
+// Media
+
+@media screen and (max-height: 600px) {
+  .picture img {
+    max-width: 50vh;
+    max-height: 50vh;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 2rem;
+    position: relative;
+  }
+}
